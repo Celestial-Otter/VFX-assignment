@@ -48,6 +48,9 @@ MonoBehaviour:
     - model: {fileID: 8926484042661614940}
       id: 0
       isStickyNote: 0
+    - model: {fileID: 8926484042661614944}
+      id: 0
+      isStickyNote: 0
   - title: Glowing Circle Start
     position:
       serializedVersion: 2
@@ -97,9 +100,9 @@ MonoBehaviour:
   - title: Particle Explosion
     position:
       serializedVersion: 2
-      x: 1399
-      y: -198
-      width: 703
+      x: 1449
+      y: -139
+      width: 728
       height: 2228
     contents:
     - model: {fileID: 8926484042661614744}
@@ -118,6 +121,9 @@ MonoBehaviour:
       id: 1
       isStickyNote: 0
     - model: {fileID: 8926484042661614812}
+      id: 0
+      isStickyNote: 0
+    - model: {fileID: 8926484042661614942}
       id: 0
       isStickyNote: 0
   - title: Shockwave
@@ -150,7 +156,7 @@ MonoBehaviour:
     x: 247
     y: -2114
     width: 2520
-    height: 4153
+    height: 4203
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,6 +198,8 @@ MonoBehaviour:
   - {fileID: 8926484042661614931}
   - {fileID: 8926484042661614935}
   - {fileID: 8926484042661614940}
+  - {fileID: 8926484042661614942}
+  - {fileID: 8926484042661614944}
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
@@ -223,9 +231,9 @@ MonoBehaviour:
     min: -Infinity
     max: Infinity
     descendantCount: 0
-  - name: StartTime
-    path: StartTime
-    tooltip: 
+  - name: PortalDelay
+    path: PortalDelay
+    tooltip: Sets the delay before the portal opens
     sheetType: m_Float
     realType: Single
     defaultValue:
@@ -233,6 +241,32 @@ MonoBehaviour:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
       m_SerializableObject: 1.5
+    min: -Infinity
+    max: Infinity
+    descendantCount: 0
+  - name: ExplosionParticleNum
+    path: ExplosionParticleNum
+    tooltip: Controls the number of particles generated for the explosion
+    sheetType: m_Int
+    realType: Int32
+    defaultValue:
+      m_Type:
+        m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      m_SerializableObject: 10000
+    min: -Infinity
+    max: Infinity
+    descendantCount: 0
+  - name: PortalParticleNum
+    path: PortalParticleNum
+    tooltip: Controls the number of particles generated for the portal
+    sheetType: m_Int
+    realType: Int32
+    defaultValue:
+      m_Type:
+        m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      m_SerializableObject: 10000
     min: -Infinity
     max: Infinity
     descendantCount: 0
@@ -2542,7 +2576,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614648}
       inputSlot: {fileID: 8926484042661614780}
-    position: {x: 1470, y: 1779}
+    position: {x: 1545, y: 1838}
     expandedSlots: []
     expanded: 0
 --- !u!114 &8926484042661614648
@@ -5250,7 +5284,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children:
   - {fileID: 8926484042661614809}
-  m_UIPosition: {x: 1650, y: -139}
+  m_UIPosition: {x: 1725, y: -80}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -5283,7 +5317,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children:
   - {fileID: 8926484042661614749}
-  m_UIPosition: {x: 1651, y: 688}
+  m_UIPosition: {x: 1726, y: 747}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -5316,7 +5350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 8926484042661614747}
   m_Children: []
-  m_UIPosition: {x: 1089.5571, y: -892.91425}
+  m_UIPosition: {x: 0, y: 2}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -5732,7 +5766,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614777}
   - {fileID: 8926484042661614779}
   - {fileID: 8926484042661614784}
-  m_UIPosition: {x: 1653, y: 1061}
+  m_UIPosition: {x: 1728, y: 1120}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -5818,7 +5852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 8926484042661614760}
   m_Children: []
-  m_UIPosition: {x: 1089.5571, y: -890.91425}
+  m_UIPosition: {x: 0, y: 2}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -5840,7 +5874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 8926484042661614760}
   m_Children: []
-  m_UIPosition: {x: 1089.5571, y: -816.91425}
+  m_UIPosition: {x: 0, y: 76}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -5862,7 +5896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 8926484042661614760}
   m_Children: []
-  m_UIPosition: {x: 1089.5571, y: -892.91425}
+  m_UIPosition: {x: 0, y: 152}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -5969,7 +6003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 8926484042661614760}
   m_Children: []
-  m_UIPosition: {x: 1089.5571, y: -892.91425}
+  m_UIPosition: {x: 0, y: 249}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -6268,7 +6302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 8926484042661614760}
   m_Children: []
-  m_UIPosition: {x: 1089.5571, y: -740.91425}
+  m_UIPosition: {x: 0, y: 380}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -6330,7 +6364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 8926484042661614760}
   m_Children: []
-  m_UIPosition: {x: 1089.5571, y: -892.91425}
+  m_UIPosition: {x: 0, y: 491}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -6505,7 +6539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 8926484042661614760}
   m_Children: []
-  m_UIPosition: {x: 1089.5571, y: -629.91425}
+  m_UIPosition: {x: 0, y: 588}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -6569,7 +6603,7 @@ MonoBehaviour:
   m_Children:
   - {fileID: 8926484042661614797}
   - {fileID: 8926484042661614800}
-  m_UIPosition: {x: 1650, y: 166}
+  m_UIPosition: {x: 1725, y: 225}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -6951,7 +6985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 8926484042661614786}
   m_Children: []
-  m_UIPosition: {x: 1322.9398, y: -835.3421}
+  m_UIPosition: {x: 0, y: 2}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -7060,7 +7094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 8926484042661614786}
   m_Children: []
-  m_UIPosition: {x: 1089.5571, y: -892.91425}
+  m_UIPosition: {x: 0, y: 97}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -7095,7 +7129,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.ArcCircle, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"circle":{"center":{"x":0.0,"y":0.0,"z":0.0},"radius":5.0},"arc":6.2831854820251469}'
+      m_SerializableObject: '{"circle":{"center":{"x":0.0,"y":0.0,"z":0.0},"radius":4.0},"arc":6.2831854820251469}'
     m_Space: 0
   m_Property:
     name: ArcCircle
@@ -7397,7 +7431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 8926484042661614744}
   m_Children: []
-  m_UIPosition: {x: 841.36035, y: -997.4082}
+  m_UIPosition: {x: 0, y: 2}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -7432,7 +7466,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 750
+      m_SerializableObject: 100
     m_Space: 2147483647
   m_Property:
     name: Count
@@ -7453,7 +7487,8 @@ MonoBehaviour:
       m_Regex: 
       m_RegexMaxLength: 0
   m_Direction: 0
-  m_LinkedSlots: []
+  m_LinkedSlots:
+  - {fileID: 8926484042661614943}
 --- !u!114 &8926484042661614811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7514,7 +7549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1424, y: 765}
+  m_UIPosition: {x: 1499, y: 824}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -10118,7 +10153,8 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
     attributes: []
   m_Direction: 0
-  m_LinkedSlots: []
+  m_LinkedSlots:
+  - {fileID: 8926484042661614945}
 --- !u!114 &8926484042661614938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10208,7 +10244,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614941}
-  m_ExposedName: StartTime
+  m_ExposedName: PortalDelay
   m_Exposed: 1
   m_Order: 2
   m_Category: 
@@ -10221,7 +10257,7 @@ MonoBehaviour:
       m_SerializableType: 
     m_SerializableObject: 
   m_IsOutput: 0
-  m_Tooltip: 
+  m_Tooltip: Sets the delay before the portal opens
   m_Nodes:
   - m_Id: 0
     linkedSlots:
@@ -10265,3 +10301,157 @@ MonoBehaviour:
   m_Direction: 1
   m_LinkedSlots:
   - {fileID: 8926484042661614933}
+--- !u!114 &8926484042661614942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330e0fca1717dde4aaa144f48232aa64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Parent: {fileID: 114350483966674976}
+  m_Children: []
+  m_UIPosition: {x: 0, y: 0}
+  m_UICollapsed: 0
+  m_UISuperCollapsed: 0
+  m_InputSlots: []
+  m_OutputSlots:
+  - {fileID: 8926484042661614943}
+  m_ExposedName: ExplosionParticleNum
+  m_Exposed: 1
+  m_Order: 3
+  m_Category: 
+  m_Min:
+    m_Type:
+      m_SerializableType: 
+    m_SerializableObject: 
+  m_Max:
+    m_Type:
+      m_SerializableType: 
+    m_SerializableObject: 
+  m_IsOutput: 0
+  m_Tooltip: Controls the number of particles generated for the explosion
+  m_Nodes:
+  - m_Id: 0
+    linkedSlots:
+    - outputSlot: {fileID: 8926484042661614943}
+      inputSlot: {fileID: 8926484042661614810}
+    position: {x: 1474, y: 54}
+    expandedSlots: []
+    expanded: 1
+--- !u!114 &8926484042661614943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d246e354feb93041a837a9ef59437cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
+  m_Children: []
+  m_UIPosition: {x: 0, y: 0}
+  m_UICollapsed: 1
+  m_UISuperCollapsed: 0
+  m_MasterSlot: {fileID: 8926484042661614943}
+  m_MasterData:
+    m_Owner: {fileID: 8926484042661614942}
+    m_Value:
+      m_Type:
+        m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      m_SerializableObject: 10000
+    m_Space: 2147483647
+  m_Property:
+    name: o
+    m_serializedType:
+      m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+    attributes: []
+  m_Direction: 1
+  m_LinkedSlots:
+  - {fileID: 8926484042661614810}
+--- !u!114 &8926484042661614944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330e0fca1717dde4aaa144f48232aa64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Parent: {fileID: 114350483966674976}
+  m_Children: []
+  m_UIPosition: {x: 0, y: 0}
+  m_UICollapsed: 0
+  m_UISuperCollapsed: 0
+  m_InputSlots: []
+  m_OutputSlots:
+  - {fileID: 8926484042661614945}
+  m_ExposedName: PortalParticleNum
+  m_Exposed: 1
+  m_Order: 4
+  m_Category: 
+  m_Min:
+    m_Type:
+      m_SerializableType: 
+    m_SerializableObject: 
+  m_Max:
+    m_Type:
+      m_SerializableType: 
+    m_SerializableObject: 
+  m_IsOutput: 0
+  m_Tooltip: Controls the number of particles generated for the portal
+  m_Nodes:
+  - m_Id: 0
+    linkedSlots:
+    - outputSlot: {fileID: 8926484042661614945}
+      inputSlot: {fileID: 8926484042661614937}
+    position: {x: 505, y: 76}
+    expandedSlots: []
+    expanded: 1
+--- !u!114 &8926484042661614945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d246e354feb93041a837a9ef59437cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
+  m_Children: []
+  m_UIPosition: {x: 0, y: 0}
+  m_UICollapsed: 1
+  m_UISuperCollapsed: 0
+  m_MasterSlot: {fileID: 8926484042661614945}
+  m_MasterData:
+    m_Owner: {fileID: 8926484042661614944}
+    m_Value:
+      m_Type:
+        m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      m_SerializableObject: 10000
+    m_Space: 2147483647
+  m_Property:
+    name: o
+    m_serializedType:
+      m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+    attributes: []
+  m_Direction: 1
+  m_LinkedSlots:
+  - {fileID: 8926484042661614937}
